@@ -14,7 +14,6 @@ def forward(X, W1, b1, W2, b2):
     Y = expA / expA.sum(axis=1, keepdims=True)
     return Y, Z
 
-
 # determine the classification rate
 # num correct / num total
 def classification_rate(Y, P):
@@ -25,7 +24,6 @@ def classification_rate(Y, P):
         if Y[i] == P[i]:
             n_correct += 1
     return float(n_correct) / n_total
-
 
 def derivative_w2(Z, T, Y):
     N, K = T.shape
@@ -59,7 +57,6 @@ def derivative_w2(Z, T, Y):
 
     return ret4
 
-
 def derivative_w1(X, Z, T, Y, W2):
     N, D = X.shape
     M, K = W2.shape
@@ -80,19 +77,15 @@ def derivative_w1(X, Z, T, Y, W2):
 
     return ret2
 
-
 def derivative_b2(T, Y):
     return (T - Y).sum(axis=0)
-
 
 def derivative_b1(T, Y, W2, Z):
     return ((T - Y).dot(W2.T) * Z * (1 - Z)).sum(axis=0)
 
-
 def cost(T, Y):
     tot = T * np.log(Y)
     return tot.sum()
-
 
 def main():
     # create the data
@@ -140,10 +133,8 @@ def main():
         b2 += learning_rate * derivative_b2(T, output)
         W1 += learning_rate * derivative_w1(X, hidden, T, output, W2)
         b1 += learning_rate * derivative_b1(T, output, W2, hidden)
-
     plt.plot(costs)
     plt.show()
-
 
 if __name__ == '__main__':
     main()

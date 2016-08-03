@@ -54,7 +54,6 @@ def derivative_w2(Z, T, Y):
     # fastest - let's not loop over anything
     ret4 = Z.T.dot(T - Y)
     # assert(np.abs(ret1 - ret4).sum() < 0.00001)
-
     return ret4
 
 def derivative_w1(X, Z, T, Y, W2):
@@ -74,7 +73,6 @@ def derivative_w1(X, Z, T, Y, W2):
     ret2 = X.T.dot(dZ)
 
     # assert(np.abs(ret1 - ret2).sum() < 0.00001)
-
     return ret2
 
 def derivative_b2(T, Y):

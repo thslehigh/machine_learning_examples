@@ -18,11 +18,9 @@ def forward(X, W1, b1, W2, b2):
     Y = 1 / (1 + np.exp(-activation))
     return Y, Z
 
-
 def predict(X, W1, b1, W2, b2):
     Y, _ = forward(X, W1, b1, W2, b2)
     return np.round(Y)
-
 
 def derivative_w2(Z, T, Y):
     # Z is (N, M)
@@ -31,17 +29,14 @@ def derivative_w2(Z, T, Y):
 def derivative_b2(T, Y):
     return (T - Y).sum()
 
-
 def derivative_w1(X, Z, T, Y, W2):
     dZ = np.outer(T-Y, W2) * Z * (1 - Z)
     # dZ = np.outer(T-Y, W2) * (1 - Z * Z)
     return X.T.dot(dZ)
 
-
 def derivative_b1(Z, T, Y, W2):
     dZ = np.outer(T-Y, W2) * (1 - Z * Z)
     return dZ.sum(axis=0)
-
 
 def cost(T, Y):
     # tot = 0
@@ -52,8 +47,6 @@ def cost(T, Y):
     #         tot += np.log(1 - Y[n])
     # return tot
     return np.sum(T*np.log(Y) + (1-T)*np.log(1-Y))
-
-
 
 def test_xor():
     X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
@@ -90,7 +83,6 @@ def test_xor():
     print "final classification rate:", np.mean(prediction == Y)
     plt.plot(LL)
     plt.show()
-
 
 def test_donut():
     # donut example
@@ -134,7 +126,6 @@ def test_donut():
             print "i:", i, "ll:", ll, "classification rate:", 1 - er
     plt.plot(LL)
     plt.show()
-
 
 if __name__ == '__main__':
     # test_xor()

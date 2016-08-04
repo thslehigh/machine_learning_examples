@@ -79,7 +79,6 @@ def test_xor():
         b1 += learning_rate * (derivative_b1(Z, Y, pY, W2) - regularization * b1)
         if i % 1000 == 0:
             print ll
-
     print "final classification rate:", np.mean(prediction == Y)
     plt.plot(LL)
     plt.show()
@@ -128,8 +127,7 @@ def test_donut():
     plt.show()
 
 if __name__ == '__main__':
-    # test_xor()
-    test_donut()
+    test_donut() # test_xor()   
 
     
 

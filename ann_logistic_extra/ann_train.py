@@ -51,7 +51,6 @@ def classification_rate(Y, P):
 def cross_entropy(T, pY):
     return -np.mean(T*np.log(pY))
 
-
 # train loop
 train_costs = []
 test_costs = []

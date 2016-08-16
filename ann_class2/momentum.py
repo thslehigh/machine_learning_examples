@@ -1,5 +1,5 @@
 # Compare momentum with regular gradient descent
-# NOTE: MUST restrict initial values of W by dividing by # // sigmoid vs.rectifier forhiddens
+# NOTE: MUST restrict initial values W by dividing by # // sigmoid vs.rectifier forhiddens
 # We get 15% error rate with sigmoid, 3% error rate with ReLU
 import numpy as np
 from sklearn.utils import shuffle

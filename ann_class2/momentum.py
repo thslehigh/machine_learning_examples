@@ -61,7 +61,6 @@ def main():
                 err = error_rate(pY, Ytest)
                 CR_batch.append(err)
                 print "Error rate:", err
-
     pY, _ = forward(Xtest, W1, b1, W2, b2)
     print "Final error rate:", error_rate(pY, Ytest)
 

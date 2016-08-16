@@ -17,7 +17,6 @@ def main():
     X, Y = get_normalized_data()
     lr = 0.00004
     reg = 0.01
-
     Xtrain = X[:-1000,]
     Ytrain = Y[:-1000]
     Xtest  = X[-1000:,]

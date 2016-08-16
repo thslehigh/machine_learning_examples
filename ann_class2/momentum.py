@@ -6,7 +6,6 @@ from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
 from util import get_normalized_data, error_rate, cost, y2indicator
 from mlp import forward, derivative_w2, derivative_w1, derivative_b2, derivative_b1
-
 def main():
     # compare 3 scenarios:
     # 1. batch SGD # 2. batch SGD with momentum # 3. batch SGD with Nesterov momentum
@@ -35,8 +34,7 @@ def main():
     W2 = np.random.randn(M, K) / np.sqrt(M)
     b2 = np.zeros(K)
 
-    # 1. batch
-    # cost = -16
+    # 1. batch      cost = -16
     LL_batch = []
     CR_batch = []
     for i in xrange(max_iter):

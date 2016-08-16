@@ -72,11 +72,7 @@ def main():
     b2 = np.zeros(K)
     LL_momentum = []
     CR_momentum = []
-    mu = 0.9
-    dW2 = 0
-    db2 = 0
-    dW1 = 0
-    db1 = 0
+    mu = 0.9    dW2 = 0   db2 = 0   dW1 = 0  db1 = 0
     for i in xrange(max_iter):
         for j in xrange(n_batches):
             Xbatch = Xtrain[j*batch_sz:(j*batch_sz + batch_sz),]

@@ -1,5 +1,3 @@
-# In this file we compare the progression of the cost function vs. iteration
-# for 3 cases:
 # 1) full gradient descent 2) batch gradient descent 3) stochastic gradient descent
 # We use the PCA-transformed data to keep the dimensionality down (D=300)
 # I've tailored this example so that the training time for each is feasible.

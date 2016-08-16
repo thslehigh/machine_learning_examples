@@ -10,9 +10,7 @@ from mlp import forward, derivative_w2, derivative_w1, derivative_b2, derivative
 
 def main():
     # compare 3 scenarios:
-    # 1. batch SGD
-    # 2. batch SGD with momentum
-    # 3. batch SGD with Nesterov momentum
+    # 1. batch SGD # 2. batch SGD with momentum # 3. batch SGD with Nesterov momentum
 
     max_iter = 20 # make it 30 for sigmoid
     print_period = 10

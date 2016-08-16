@@ -1,17 +1,11 @@
 # In this file we compare the progression of the cost function vs. iteration
 # for 3 cases:
-# 1) full gradient descent
-# 2) batch gradient descent
-# 3) stochastic gradient descent
-#
+# 1) full gradient descent 2) batch gradient descent 3) stochastic gradient descent
 # We use the PCA-transformed data to keep the dimensionality down (D=300)
 # I've tailored this example so that the training time for each is feasible.
 # So what we are really comparing is how quickly each type of GD can converge,
 # (but not actually waiting for convergence) and what the cost looks like at
 # each iteration.
-#
-# For the class Data Science: Practical Deep Learning Concepts in Theano and TensorFLow
-# https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
 
 import numpy as np
 import pandas as pd
@@ -20,7 +14,6 @@ from sklearn.utils import shuffle
 from datetime import datetime
 
 from util import get_transformed_data, forward, error_rate, cost, gradW, gradb, y2indicator
-
 
 def main():
     X, Y, _, _ = get_transformed_data()
@@ -97,7 +90,6 @@ def main():
     print "Final error rate:", error_rate(p_y, Ytest)
     print "Elapsted time for SGD:", datetime.now() - t0
 
-
     # 3. batch
     W = np.random.randn(D, 10) / 28
     b = np.zeros(10)
@@ -129,8 +121,6 @@ def main():
     print "Final error rate:", error_rate(p_y, Ytest)
     print "Elapsted time for batch GD:", datetime.now() - t0
 
-
-
     x1 = np.linspace(0, 1, len(LL))
     plt.plot(x1, LL, label="full")
     x2 = np.linspace(0, 1, len(LL_stochastic))
@@ -139,8 +129,6 @@ def main():
     plt.plot(x3, LL_batch, label="batch")
     plt.legend()
     plt.show()
-
-
 
 if __name__ == '__main__':
     main()

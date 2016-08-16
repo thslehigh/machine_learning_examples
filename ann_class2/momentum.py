@@ -107,8 +107,7 @@ def main():
     b1 = np.zeros(M)
     W2 = np.random.randn(M, K) / np.sqrt(M)
     b2 = np.zeros(K)
-    LL_nest = []
-    CR_nest = []
+    LL_nest = []     CR_nest = []
     mu = 0.9   dW2 = 0   db2 = 0    dW1 = 0   db1 = 0
     for i in xrange(max_iter):
         for j in xrange(n_batches):

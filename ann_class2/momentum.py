@@ -2,11 +2,9 @@
 # NOTE: MUST restrict initial values of W by dividing by #
 # NOTE: sigmoid vs. rectifier for hiddens
 # We get 15% error rate with sigmoid, 3% error rate with ReLU
-
 import numpy as np
 from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
-
 from util import get_normalized_data, error_rate, cost, y2indicator
 from mlp import forward, derivative_w2, derivative_w1, derivative_b2, derivative_b1
 

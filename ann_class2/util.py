@@ -138,7 +138,6 @@ def benchmark_full():
         if i % 10 == 0:
             print "Cost at iteration %d: %.6f" % (i, ll)
             print "Error rate:", err
-
     p_y = forward(Xtest, W, b)
     print "Final error rate:", error_rate(p_y, Ytest)
     iters = range(len(LL))

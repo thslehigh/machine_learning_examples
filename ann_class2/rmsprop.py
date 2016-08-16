@@ -1,14 +1,10 @@
 # Compare RMSprop vs. constant learning rate
-# For the class Data Science: Practical Deep Learning Concepts in Theano and TensorFLow
-# https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
 
 import numpy as np
 from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
-
 from util import get_normalized_data, error_rate, cost, y2indicator
 from mlp import forward, derivative_w2, derivative_w1, derivative_b2, derivative_b1
-
 
 def main():
     max_iter = 20 # make it 30 for sigmoid
@@ -68,7 +64,6 @@ def main():
     pY, _ = forward(Xtest, W1, b1, W2, b2)
     print "Final error rate:", error_rate(pY, Ytest)
 
-
     # 2. RMSprop
     W1 = np.random.randn(D, M) / 28
     b1 = np.zeros(M)
@@ -126,7 +121,6 @@ def main():
     plt.plot(LL_rms, label='rms')
     plt.legend()
     plt.show()
-
 
 if __name__ == '__main__':
     main()

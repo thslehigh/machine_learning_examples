@@ -1,8 +1,5 @@
-# This tutorial is analogous to theano1.py
-# It introduces basic variables and functions
+# This tutorial is like theano1.py (basic variables and functions)
 # and shows how you can optimize a function.
-# I compare this to theano1.py multiple times.
-# So you might want to check that out first.
 import numpy as np
 import tensorflow as tf
 

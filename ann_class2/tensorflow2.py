@@ -1,6 +1,5 @@
 # 2-hidden layer NN in TensorFlow
 # Code is not optimized for speed / just get sth-working, using principles we know.
-
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt

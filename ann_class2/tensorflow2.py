@@ -4,18 +4,14 @@ import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from util import get_normalized_data, y2indicator
-
 def error_rate(p, t):
     return np.mean(p != t)
 
-# copy this first part from theano2.py
 def main():
     # step 1: get the data and define all the usual variables
     X, Y = get_normalized_data()
-
     max_iter = 15
     print_period = 10
-
     lr = 0.00004
     reg = 0.01
 

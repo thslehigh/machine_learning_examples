@@ -1,10 +1,5 @@
 # A 1-hidden-layer neural network in Theano.
-# This code is not optimized for speed.
-# It's just to get something working, using the principles we know.
-
-# For the class Data Science: Practical Deep Learning Concepts in Theano and TensorFLow
-# https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
-
+# Code is not optimized for speed / just to get sth-working and using principles we know.
 import numpy as np
 import theano
 import theano.tensor as T
@@ -12,14 +7,11 @@ import matplotlib.pyplot as plt
 
 from util import get_normalized_data, y2indicator
 
-
 def error_rate(p, t):
     return np.mean(p != t)
 
-
 def relu(a):
     return a * (a > 0)
-
 
 def main():
     # step 1: get the data and define all the usual variables
@@ -99,12 +91,10 @@ def main():
                 err = error_rate(prediction_val, Ytest)
                 print "Cost / err at iteration i=%d, j=%d: %.3f / %.3f" % (i, j, cost_val, err)
                 LL.append(cost_val)
-
     plt.plot(LL)
     plt.show()
 
     # how would you incorporate momentum into the gradient descent procedure?
-
 
 if __name__ == '__main__':
     main()

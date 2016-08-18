@@ -94,7 +94,5 @@ def main():
     plt.plot(LL)
     plt.show()
 
-    # how would you incorporate momentum into the gradient descent procedure?
-
 if __name__ == '__main__':
     main()

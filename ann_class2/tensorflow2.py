@@ -63,8 +63,7 @@ def main():
     cost = tf.reduce_sum(tf.nn.softmax_cross_entropy_with_logits(Yish, T))
 
     # we choose the optimizer but don't implement the algorithm ourselves
-    # let's go with RMSprop, since we just learned about it.
-    # it includes momentum!
+    # let's go with RMSprop, since we just learned about it / includes momentum!
     train_op = tf.train.RMSPropOptimizer(lr, decay=0.99, momentum=0.9).minimize(cost)
 
     # we'll use this to calculate the error rate

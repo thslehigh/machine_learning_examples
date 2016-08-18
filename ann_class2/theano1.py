@@ -1,5 +1,4 @@
 # Theano basics.
-
 import theano.tensor as T
 
 # just some different types of variables
@@ -7,13 +6,11 @@ c = T.scalar('c')
 v = T.vector('v')
 A = T.matrix('A')
 
-
 # we can define a matrix multiplication
 w = A.dot(v)
 
 # how do these variables actually take on values?
 import theano
-
 matrix_times_vector = theano.function(inputs=[A, v], outputs=w)
 
 # let's import numpy so we can create real arrays

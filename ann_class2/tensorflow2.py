@@ -91,6 +91,5 @@ def main():
     # increase max_iter and notice how the test cost starts to increase.
     # are we overfitting by adding that extra layer?
     # how would you add regularization to this model?
-
 if __name__ == '__main__':
     main()

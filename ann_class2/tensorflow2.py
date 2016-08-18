@@ -86,7 +86,6 @@ def main():
                     err = error_rate(prediction, Ytest)
                     print "Cost / err at iteration i=%d, j=%d: %.3f / %.3f" % (i, j, test_cost, err)
                     LL.append(test_cost)
-
     plt.plot(LL)
     plt.show()
     # increase max_iter and notice how the test cost starts to increase.

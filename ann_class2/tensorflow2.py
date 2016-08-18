@@ -1,21 +1,13 @@
 # 2-hidden layer NN in TensorFlow
-# This code is not optimized for speed.
-# It's just to get something working, using the principles we know.
-
-# For the class Data Science: Practical Deep Learning Concepts in Theano and TensorFLow
-# https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
+# Code is not optimized for speed / just get sth-working, using principles we know.
 
 import numpy as np
 import tensorflow as tf
-
 import matplotlib.pyplot as plt
-
 from util import get_normalized_data, y2indicator
-
 
 def error_rate(p, t):
     return np.mean(p != t)
-
 
 # copy this first part from theano2.py
 def main():
@@ -49,7 +41,6 @@ def main():
     b2_init = np.zeros(M2)
     W3_init = np.random.randn(M2, K) / np.sqrt(M2)
     b3_init = np.zeros(K)
-
 
     # define variables and expressions
     X = tf.placeholder(tf.float32, shape=(None, D), name='X')
@@ -102,7 +93,6 @@ def main():
     # increase max_iter and notice how the test cost starts to increase.
     # are we overfitting by adding that extra layer?
     # how would you add regularization to this model?
-
 
 if __name__ == '__main__':
     main()
